@@ -31,10 +31,6 @@ classification tasks.
 - ✅ **YOLOv11-l (face) trained on WIDERFace [01.25]** 
 - ✅ **YOLOv10-l (face) trained on WIDERFace [01.25]**
 
-## 🌟Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=akanametov/yolo-face&type=Date)](https://www.star-history.com/#akanametov/yolo-face&Date)
-
 ## Installation
 
 ``` shell
@@ -91,6 +87,11 @@ pip install ultralytics
 # Convert with command
 yolo export model=yolov10n-face.pt format=onnx
 ```
+
+## 🌟Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=akanametov/yolo-face&type=Date)](https://www.star-history.com/#akanametov/yolo-face&Date)
+
 
 </details>
 
