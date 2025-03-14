@@ -33,7 +33,7 @@ classification tasks.
 
 ## 🌟Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=akanametov/yolo-face&type=Date)](https://star-history.com/#akanametov/yolo-face)
+[![Star History Chart](https://api.star-history.com/svg?repos=akanametov/yolo-face&type=Date)](https://www.star-history.com/#akanametov/yolo-face&Date)
 
 ## Installation
 
