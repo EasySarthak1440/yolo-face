@@ -48,44 +48,44 @@ cd yolo-face
 
 # Models
 
-[`yolov12n-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov12n-face.pt)
-[`yolov12s-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov12s-face.pt)
-[`yolov12m-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov12m-face.pt)
-[`yolov12l-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov12l-face.pt)
+[`yolov12n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12n-face.pt)
+[`yolov12s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12s-face.pt)
+[`yolov12m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12m-face.pt)
+[`yolov12l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12l-face.pt)
 
-[`yolov11n-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov11n-face.pt)
-[`yolov11s-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov11s-face.pt)
-[`yolov11m-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov11m-face.pt)
-[`yolov11l-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov11l-face.pt)
+[`yolov11n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11n-face.pt)
+[`yolov11s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11s-face.pt)
+[`yolov11m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11m-face.pt)
+[`yolov11l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11l-face.pt)
 
-[`yolov10n-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov10n-face.pt)
-[`yolov10s-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov10s-face.pt)
-[`yolov10m-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov10m-face.pt)
-[`yolov10l-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov10l-face.pt)
+[`yolov10n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10n-face.pt)
+[`yolov10s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10s-face.pt)
+[`yolov10m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10m-face.pt)
+[`yolov10l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10l-face.pt)
 
-[`yolov8n-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-face.pt)
-[`yolov8m-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8m-face.pt)
-[`yolov8l-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8l-face.pt)
+[`yolov8n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-face.pt)
+[`yolov8m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-face.pt)
+[`yolov8l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8l-face.pt)
 
-[`yolov6n-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov6n-face.pt)
-[`yolov6m-face.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov6m-face.pt)
+[`yolov6n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov6n-face.pt)
+[`yolov6m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov6m-face.pt)
 
-[`yolov8n-person.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-person.pt)
+[`yolov8n-person.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-person.pt)
 
-[`yolov8n-football.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-football.pt)
-[`yolov8m-football.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8m-football.pt)
+[`yolov8n-football.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-football.pt)
+[`yolov8m-football.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-football.pt)
 
-[`yolov8n-parking.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-parking.pt)
-[`yolov8m-parking.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8m-parking.pt)
+[`yolov8n-parking.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-parking.pt)
+[`yolov8m-parking.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-parking.pt)
 
-[`yolov8n-drone.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-drone.pt)
-[`yolov8m-drone.pt`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8m-drone.pt)
+[`yolov8n-drone.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-drone.pt)
+[`yolov8m-drone.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-drone.pt)
 
 # ONNX models
 
-[`yolov11n-face.onnx`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov11n-face.onnx)
-[`yolov10n-face.onnx`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov10n-face.onnx)
-[`yolov8n-face.onnx`](https://github.com/akanametov/yolo-face/releases/download/v0.0.0/yolov8n-face.onnx)
+[`yolov11n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11n-face.onnx)
+[`yolov10n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10n-face.onnx)
+[`yolov8n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-face.onnx)
 
 To convert models to `.onnx` format:
 ```
@@ -97,7 +97,7 @@ yolo export model=yolov10n-face.pt format=onnx
 
 ## 🌟Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=akanametov/yolo-face&type=Date)](https://www.star-history.com/#akanametov/yolo-face&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=YapaLab/yolo-face&type=Date)](https://www.star-history.com/#YapaLab/yolo-face&Date)
 
 
 </details>
