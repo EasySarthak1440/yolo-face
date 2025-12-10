@@ -1,529 +1,198 @@
+Here’s a **high-impact, interview-ready `README.md`** you can directly copy–paste into your repo. I’ve written it to strategically impress technical interviewers and hiring managers.
 
-<<<<<<< HEAD
-<br>
+---
 
-<div>
-    <a href="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yaml"><img src="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yaml/badge.svg" alt="Ultralytics CI"></a>
-    <a href="https://zenodo.org/badge/latestdoi/264818686"><img src="https://zenodo.org/badge/264818686.svg" alt="YOLOv8 Citation"></a>
-    <a href="https://hub.docker.com/r/ultralytics/ultralytics"><img src="https://img.shields.io/docker/pulls/ultralytics/ultralytics?logo=docker" alt="Docker Pulls"></a>
-    <br>
-    <a href="https://console.paperspace.com/github/ultralytics/ultralytics"><img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient"/></a>
-    <a href="https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
-    <a href="https://www.kaggle.com/ultralytics/yolov8"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open In Kaggle"></a>
-  </div>
-<br>
+# 🚀 Real-Time Face Detection & Multi-Object Tracking System (YOLOv8 + SORT)
 
-[Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics), developed by [Ultralytics](https://ultralytics.com),
-is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces
-new features and improvements to further boost performance and flexibility. YOLOv8 is designed to be fast, accurate, and
-easy to use, making it an excellent choice for a wide range of object detection, image segmentation and image
-classification tasks.
+![Demo](./output_4.mp4)
 
-<img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/yolo-comparison-plots.png"></a>
-</div>
+A **production-oriented, real-time face detection and tracking system** built using **YOLOv8n-face** and the **SORT (Simple Online and Realtime Tracking)** algorithm. This project demonstrates end-to-end computer vision engineering skills — from model integration to real-time tracking and performance optimization.
 
-## 🔥Update
+---
 
-- ✅ **YOLOv12-l (face) trained on WIDERFace [07.11]** 
-- ✅ **YOLOv12-m (face) trained on WIDERFace [07.11]**
-- ✅ **YOLOv12-s (face) trained on WIDERFace [07.11]**
-- ✅ **YOLOv12-n (face) trained on WIDERFace [07.11]**
+## 🧠 Project Overview
 
-## Installation
+This project performs:
 
-``` shell
-# clone repo
-git clone https://github.com/akanametov/yolo-face
+✅ Real-time face detection using **YOLOv8 specialized face model**
+✅ Persistent face tracking across frames using the **SORT algorithm (Kalman Filter + Hungarian Algorithm)**
+✅ Unique ID assignment for each detected face
+✅ High FPS optimized pipeline for real-world video streams
 
-# pip install required packages
-pip install ultralytics
+The system simulates **real-world surveillance, security, and analytics use cases**.
 
-# go to code folder
-cd yolo-face
+---
+
+## ⚙️ Tech Stack
+
+| Component      | Technology                                             |
+| -------------- | ------------------------------------------------------ |
+| Detection      | YOLOv8n-face                                           |
+| Tracking       | SORT (Kalman Filter + IOU matching)                    |
+| Language       | Python                                                 |
+| Environment    | Jupyter Notebook                                       |
+| Framework      | Ultralytics YOLOv8                                     |
+| Algorithms     | Kalman Filter, Hungarian Algorithm (Linear Assignment) |
+| Video Handling | OpenCV                                                 |
+
+---
+
+## 🏗 Project Architecture
+
+```
+Input Video
+     ↓
+YOLOv8 Face Detector
+     ↓
+Bounding Box Extraction
+     ↓
+SORT Tracker (Kalman Filters + Data Association)
+     ↓
+Unique Face ID Assignment
+     ↓
+Tracked Output Video
 ```
 
-# Models
+This project implements **true multi-object tracking**, not just detection.
 
-[`yolov12n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12n-face.pt)
-[`yolov12s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12s-face.pt)
-[`yolov12m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12m-face.pt)
-[`yolov12l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov12l-face.pt)
+---
 
-[`yolov11n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11n-face.pt)
-[`yolov11s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11s-face.pt)
-[`yolov11m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11m-face.pt)
-[`yolov11l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11l-face.pt)
+## 🧩 Core Implementation Details
 
-[`yolov10n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10n-face.pt)
-[`yolov10s-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10s-face.pt)
-[`yolov10m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10m-face.pt)
-[`yolov10l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10l-face.pt)
+### 🔹 Face Detection
 
-[`yolov8n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-face.pt)
-[`yolov8m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-face.pt)
-[`yolov8l-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8l-face.pt)
+* Uses **YOLOv8n-face pre-trained model**
+* Optimized for facial feature detection
+* Fast inference suitable for real-time systems
 
-[`yolov6n-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov6n-face.pt)
-[`yolov6m-face.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov6m-face.pt)
+### 🔹 Tracking Logic (from sort.py )
 
-[`yolov8n-person.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-person.pt)
+The tracker internally uses:
 
-[`yolov8n-football.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-football.pt)
-[`yolov8m-football.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-football.pt)
+* **Kalman Filter** for motion prediction
+* **IOU-based matching** between detections and trackers
+* **Hungarian algorithm** for optimal assignment
 
-[`yolov8n-parking.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-parking.pt)
-[`yolov8m-parking.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-parking.pt)
+Key classes implemented:
 
-[`yolov8n-drone.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-drone.pt)
-[`yolov8m-drone.pt`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8m-drone.pt)
-
-# ONNX models
-
-[`yolov11n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov11n-face.onnx)
-[`yolov10n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov10n-face.onnx)
-[`yolov8n-face.onnx`](https://github.com/YapaLab/yolo-face/releases/download/v0.0.0/yolov8n-face.onnx)
-
-To convert models to `.onnx` format:
-```
-# Install ultralytics
-pip install ultralytics
-# Convert with command
-yolo export model=yolov10n-face.pt format=onnx
+```python
+class KalmanBoxTracker
+class Sort
 ```
 
-## 🌟Star History
+These ensure **stable tracking even during occlusion and motion blur**.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=YapaLab/yolo-face&type=Date)](https://www.star-history.com/#YapaLab/yolo-face&Date)
+### 🔹 Unique ID System
 
+Each face is assigned a **persistent ID**, allowing:
 
-</details>
+* Human movement analysis
+* Behavior tracking
+* Face-based analytics
 
-# YOLOv11-face
+---
 
-## Inference
+## 📁 Project Structure
 
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov11n-face.pt conf=0.25 imgsz=1280 line_thickness=1 max_det=1000 source=examples/face.jpg
+```
+yolov8-face/
+│
+├── yoloface4.ipynb       # Main pipeline notebook (Detection + Tracking)
+├── sort.py               # Custom SORT tracking implementation
+├── test_video1.mp4       # Input video
+├── output_1.mp4
+├── output_2.mp4
+├── output_3.mp4
+├── output_4.mp4          # Final tracked output
+├── yolov8n-face.pt       # YOLOv8 face detection weights
+└── requirements.txt
 ```
 
-<div align="center">
-    <a href="./">
-        <img src="./results/yolov11n_widerface/face.jpg" width="90%"/>
-    </a>
-</div>
+---
 
-## Results
+## ▶️ How to Run
 
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/yolov11n_widerface/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/yolov11n_widerface/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/yolov11n_widerface/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/yolov11n_widerface/results.png" width="80%"/>
-    </a>
-</div>
-
-Confusion matrix:
-<div align="center">
-    <a href="./">
-        <img src="./results/yolov11n_widerface/confusion_matrix.png" width="70%"/>
-    </a>
-</div>
-
-## Training
-
-Data preparation
-
-* Download [dataset](http://shuoyang1213.me/WIDERFACE/):
-
-* Download pretrained [yolo11n.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt) model.
-
-Single GPU training
-
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolo11n.pt \
-data=datasets/data.yaml \
-epochs=100 \
-batch=32 \
-imgsz=640
+```bash
+git clone <your-repo-link>
+cd yolov8-face
+pip install -r requirements.txt
 ```
 
-# YOLOv8-face
+Run the notebook:
 
-## Inference
-
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov8n-face.pt conf=0.25 imgsz=1280 line_thickness=1 max_det=1000 source=examples/face.jpg
+```bash
+jupyter notebook yoloface4.ipynb
 ```
 
-<div align="center">
-    <a href="./">
-        <img src="./results/face/face.jpg" width="90%"/>
-    </a>
-</div>
+Or run tracking script:
 
-## Results
-
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/face/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/face/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/face/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/face/results.png" width="80%"/>
-    </a>
-</div>
-
-Confusion matrix:
-<div align="center">
-    <a href="./">
-        <img src="./results/face/confusion_matrix.png" width="70%"/>
-    </a>
-</div>
-
-## Training
-
-Data preparation
-
-* Download [dataset](http://shuoyang1213.me/WIDERFACE/):
-
-* Download pretrained [yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) model.
-
-Single GPU training
-
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolov8n.pt \
-data=datasets/data.yaml \
-epochs=100 \
-imgsz=640
+```bash
+python sort.py --display
 ```
 
-# YOLOv8-person
-
-## Inference
-
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov8n-face.pt conf=0.25 imgsz=1280 line_thickness=1 max_det=1000 source=examples/person.jpg
-```
-
-<div align="center">
-    <a href="./">
-        <img src="./results/person/person.jpg" width="90%"/>
-    </a>
-</div>
-
-## Results
-
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/person/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/person/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/person/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/person/results.png" width="80%"/>
-    </a>
-</div>
-
-## Training
-
-Data preparation
-
-* Download [dataset](https://competitions.codalab.org/competitions/19118):
-
-* Download pretrained [yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) model.
-
-Single GPU training
-
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolov8n.pt \
-data=datasets/data.yaml \
-epochs=100 \
-imgsz=640
-```
-
-# YOLOv8-football
-
-## Inference
-
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov8m-football.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/football.jpg
-```
-
-<div align="center">
-    <a href="./">
-        <img src="./results/football/football.jpg" width="90%"/>
-    </a>
-</div>
-
-## Results
-
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/football/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/football/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/football/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/football/results.png" width="80%"/>
-    </a>
-</div>
-
-Confusion matrix:
-<div align="center">
-    <a href="./">
-        <img src="./results/football/confusion_matrix.png" width="70%"/>
-    </a>
-</div>
-
-## Training
+---
 
-Data preparation
+## 🎥 Demo
 
-* Download [dataset](https://universe.roboflow.com/roboflow-jvuqo/football-players-detection-3zvbc/dataset/2#):
+Final output generated by the system:
+👉 `output_4.mp4`
 
-* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
-
-Single GPU training
-
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolov8m.pt \
-data=datasets/data.yaml \
-epochs=120 \
-imgsz=960
-```
-# YOLOv8-parking
-
-## Inference
-
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov8m-parking.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/parking.jpg
-```
-
-<div align="center">
-    <a href="./">
-        <img src="./results/parking/parking.jpg" width="90%"/>
-    </a>
-</div>
-
-## Results
-
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/parking/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/parking/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/parking/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/parking/results.png" width="80%"/>
-    </a>
-</div>
-
-Confusion matrix:
-<div align="center">
-    <a href="./">
-        <img src="./results/parking/confusion_matrix.png" width="70%"/>
-    </a>
-</div>
-
-## Training
+Includes:
 
-Data preparation
+* Real-time bounding boxes
+* Stable face IDs
+* Smooth tracking
 
-* Download [dataset](https://universe.roboflow.com/brad-dwyer/pklot-1tros/dataset/4):
+---
 
-* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
+## ⚡ Key Engineering Highlights
 
-Single GPU training
+✅ Built real-time CV pipeline
+✅ Implemented production-style tracking logic
+✅ Handled ID switching & occlusion problems
+✅ Used mathematical models (Kalman Filtering)
+✅ Optimized for FPS and low-latency processing
 
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolov8m.pt \
-data=datasets/data.yaml \
-epochs=10 \
-batch=32 \
-imgsz=640
-```
-
-# YOLOv8-drone
-
-## Inference
-
-On image:
-
-```shell
-yolo task=detect mode=predict model=yolov8m-drone.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/drone.jpg
-```
-
-<div align="center">
-    <a href="./">
-        <img src="./results/drone/drone.jpg" width="90%"/>
-    </a>
-</div>
-
-## Results
-
-PR curve:
-<div align="center">
-    <a href="./">
-        <img src="./results/drone/P_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/drone/PR_curve.png" width="30%"/>
-    </a>
-    <a href="./">
-        <img src="./results/drone/R_curve.png" width="30%"/>
-    </a>
-</div>
-
-Losses and mAP:
-<div align="center">
-    <a href="./">
-        <img src="./results/drone/results.png" width="80%"/>
-    </a>
-</div>
-
-Confusion matrix:
-<div align="center">
-    <a href="./">
-        <img src="./results/drone/confusion_matrix.png" width="70%"/>
-    </a>
-</div>
-
-## Training
-
-Data preparation
-
-* Download [dataset](https://universe.roboflow.com/projects-s5hzp/dronesegment/dataset/1):
-
-* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
-
-Single GPU training
-
-``` shell
-# train model
-yolo task=detect \
-mode=train \
-model=yolov8m.pt \
-data=datasets/data.yaml \
-epochs=100 \
-imgsz=640
-```
-
-## Transfer learning
-
-[`yolov8n.pt`](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt)
-
-[`yolov8m.pt`](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt)
-
-## <div align="center">License</div>
-
-YOLOv8 is available under two different licenses:
-
-- **GPL-3.0 License**: See [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
-- **Enterprise License**: Provides greater flexibility for commercial product development without the open-source
-  requirements of GPL-3.0. Typical use cases are embedding Ultralytics software and AI models in commercial products and
-  applications. Request an Enterprise License at [Ultralytics Licensing](https://ultralytics.com/license).
-
-## <div align="center">Contact</div>
-
-For YOLOv8 bugs and feature requests please visit [GitHub Issues](https://github.com/ultralytics/ultralytics/issues).
-For professional support please [Contact Us](https://ultralytics.com/contact).
-
-<br>
-<div align="center">
-  <a href="https://github.com/ultralytics" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-github.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://www.linkedin.com/company/ultralytics" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-linkedin.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://twitter.com/ultralytics" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-twitter.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://www.producthunt.com/@glenn_jocher" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-producthunt.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://youtube.com/ultralytics" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-youtube.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://www.facebook.com/ultralytics" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-facebook.png" width="3%" alt="" /></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="" />
-  <a href="https://www.instagram.com/ultralytics/" style="text-decoration:none;">
-    <img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-instagram.png" width="3%" alt="" /></a>
-</div>
-=======
->>>>>>> 96bb6ea (Update README.md)
+---
+
+
+## This project proves hands-on skills in:
+
+✔️ Computer Vision
+✔️ Real-time inference pipelines
+✔️ Object detection models
+✔️ Multi-object tracking systems
+✔️ Mathematical state estimation
+✔️ Production-ready architecture
+
+This is **not a tutorial-level project** — it mirrors **industry use cases**.
+
+---
+
+## 🌐 Potential Real-World Applications
+
+* CCTV surveillance
+* Smart city monitoring
+* Attendance systems
+* Retail footfall analysis
+* Security & law enforcement tools
+
+---
+
+## 👨‍💻 Author
+
+**Sarthak Kelkar**
+AI / Machine Learning Engineer
+Specialized in Computer Vision and Real-Time AI Systems
+
+---
+
+## ⭐ Future Improvements
+
+* Add **DeepSORT** for appearance-based tracking
+* Add Face Recognition (ArcFace)
+* Support multi-camera tracking
+* Dockerize for deployment
+
+---
+
