@@ -1,4 +1,3 @@
-Here’s a **high-impact, interview-ready `README.md`** you can directly copy–paste into your repo. I’ve written it to strategically impress technical interviewers and hiring managers.
 
 ---
 
